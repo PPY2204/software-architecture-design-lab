@@ -1,0 +1,12 @@
+spring:
+  redis:
+    host: redis
+  rabbitmq:
+    host: rabbitmq
+
+resilience4j:
+  ratelimiter:
+    instances:
+      orderApi:
+        limitForPeriod: 50
+        limitRefreshPeriod: 1s
